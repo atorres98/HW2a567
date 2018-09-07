@@ -33,7 +33,11 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangles(8, 15, 17), 'Right', '5, 12, 13 is a Right triangle')
 
     def testIsoscelesTriangles(self): """test only isosceles triangles"""
+<<<<<<< HEAD
+        self.assertEqual(classifyTriangle(3, 3, 1), 'Isosceles', ' 3, 3, 9 is an Isosceles triangle')
+=======
         self.assertEqual(classifyTriangle(3, 3, 9), 'Isosceles', ' 3, 3, 9 is an Isosceles triangle')
+>>>>>>> be17f87d146fa471fa2d8a5a39833dba0c9bdadf
         self.assertEqual(classifyTriangle(8, 8, 2), 'Isosceles', '8, 8, 2 is an Isosceles triangle')
         self.assertEqual(classifyTriangle(16, 16, 17), 'Isosceles', '16, 16, 17 is an Isosceles triangle')
 
@@ -44,7 +48,11 @@ class TestTriangles(unittest.TestCase):
 
     def testScaleneTraingles(self): """test scalene triangles only""""
         self.assertEqual(classifyTriangle(2, 3, 4), 'Scalene', '2, 3, 4 is a Scalene triangle')
+<<<<<<< HEAD
+        self.assertEqual(classifyTriangle(3, 6, 11), 'Scalene', '3, 6, 9 is a Scalene triangle')
+=======
         self.assertEqual(classifyTriangle(3, 6, 9), 'Scalene', '3, 6, 9 is a Scalene triangle')
+>>>>>>> be17f87d146fa471fa2d8a5a39833dba0c9bdadf
         self.assertEqual(classifyTriangle(8, 1, 5), 'Scalene', '8, 5, 7 is a Scalene triangle')
 
     def testOrderOfTriangles(self): """test to see if the order of the sides matters for right and isosceles triangles"""
