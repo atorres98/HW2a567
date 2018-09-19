@@ -44,11 +44,11 @@ class TestTriangles(unittest.TestCase):
 
     def testScaleneTraingles(self): """test scalene triangles only""""
         self.assertEqual(classifyTriangle(2, 3, 4), 'Scalene', '2, 3, 4 is a Scalene triangle')
-        self.assertEqual(classifyTriangle(3, 6, 11), 'Scalene', '3, 6, 11 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(3, 6, 8), 'Scalene', '3, 6, 8 is a Scalene triangle')
         self.assertEqual(classifyTriangle(8, 7, 5), 'Scalene', '8, 7, 5 is a Scalene triangle')
 
         def testOrderOfTriangles(self): """test to see if the order of the sides matters for right and isosceles triangles"""
-        self.assertEqual(classifyTriangle(12, 13, 5), 'Right', '12, 13, 5 is a Right triangle')
+        self.assertEqual(classifyTriangle(13, 12, 5), 'Right', '13, 12, 5 is a Right triangle')
         self.assertEqual(classifyTriangle(10, 5, 10), 'Isosceles', '10, 5, 10 is an Isosceles triangle')
 
 if __name__ == '__main__':

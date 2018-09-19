@@ -53,11 +53,8 @@ def classifyTriangle(a,b,c):
         return 'Right'"""
     elif (a != b) and  (b != c) and (a != c): """had (a !=b) twice"""
     """create nested if statement to distinguish scalene from right triangle"""
-        if ((a**2) + (b**2) == (c**2)):
+        if ((a**2) + (b**2) == (c**2)) or ((a**2) == (b**2) + (c**2)):
             return 'Right'
-    elif ((a ** 2) + (b ** 2)) == (c ** 2): """only had one asterisk when it was supposed to be squared"""
-        return 'Right'
-    elif (a != b) and  (b != c) and (a != c): """had (a !=b) twice"""
         return 'Scalene'
     else:
-        return 'Isoceles'
+        return 'Isosceles'
