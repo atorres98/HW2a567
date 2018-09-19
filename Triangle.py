@@ -27,11 +27,11 @@ def classifyTriangle(a,b,c):
       BEWARE: there may be a bug or two in this code
     """
 
-    # require that the input values be >= 0 and <= 200
+# require that the input values be >= 0 and <= 200
     if a > 200 or b > 200 or c > 200:
         return 'InvalidInput'
 
-    if a <= 0 or b <= 0 or c <= 0: """originally had b <= b"""
+    if a <= 0 or b <= 0 or c <= 0: #"""originally had b <= b"""
         return 'InvalidInput'
 
     # verify that all 3 inputs are integers
@@ -43,16 +43,14 @@ def classifyTriangle(a,b,c):
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)): """had minus sign instead of plus sign for 2 arguments"""
+    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):# """had minus sign instead of plus sign for 2 arguments"""
         return 'NotATriangle'
 
     # now we know that we have a valid triangle
-    if a == b == c: """originally had a==b and b==a"""
+    if a == b == c: #"""originally had a==b and b==a"""
         return 'Equilateral'
-    """elif ((a ** 2) + (b ** 2)) == (c ** 2): [only had one asterisk when it was supposed to be squared]
-        return 'Right'"""
-    elif (a != b) and  (b != c) and (a != c): """had (a !=b) twice"""
-    """create nested if statement to distinguish scalene from right triangle"""
+    elif (a != b) and  (b != c) and (a != c):# """had (a !=b) twice"""
+    #"""create nested if statement to distinguish scalene from right triangle"""
         if ((a**2) + (b**2) == (c**2)) or ((a**2) == (b**2) + (c**2)):
             return 'Right'
         return 'Scalene'
